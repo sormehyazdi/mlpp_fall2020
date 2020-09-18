@@ -12,7 +12,7 @@ import hw1_2_sy as to_db
 
 print("We will be collecting demographic data from ACS for all counties and tracts in a given state.")
 print("If the user does not provide any input, the default state is Florida.")
-print("What state are you interested in?")
+print("What state are you interested in? Please provide FIPS State Code.")
 state = input('FIPS State Code = ').strip()
 
 if state == '':
