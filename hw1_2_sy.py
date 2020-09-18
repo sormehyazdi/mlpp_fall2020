@@ -49,7 +49,7 @@ def main():
   with conn.cursor() as curs:
       #print(conn)
       #print(curs)
-      curs.execute("DROP TABLE sy_demography;")
+      curs.execute("DROP TABLE IF EXISTS sy_demography;")
       curs.execute(sql_query)
       #curs.execute("CREATE TABLE IF NOT EXISTS public.sy_demography (lan_B06007_002E integer, lan_B06007_003E integer, lan_B06007_004E integer, lan_B06007_005E integer, lan_B06007_006E integer, inc_B06010_002E integer, inc_B06010_003E integer, inc_B06010_004E integer, inc_B06010_005E integer, inc_B06010_006E integer, inc_B06010_007E integer, inc_B06010_008E integer, inc_B06010_009E integer, inc_B06010_010E integer, inc_B06010_011E integer, educ_B06009_002E integer, educ_B06009_003E integer, educ_B06009_004E integer, educ_B06009_005E integer, educ_B06009_006E integer, home_B06008_007E integer, state VARCHAR(20), county VARCHAR(20), tract VARCHAR(20));")
       #curs.execute("DELETE FROM sy_demography")
