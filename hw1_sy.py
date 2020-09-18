@@ -6,7 +6,7 @@
 
 
 import requests
-import csvkit
+#import csvkit
 import ohio.ext.pandas
 
 #use bs4 to do the requests, cleaner than curling
