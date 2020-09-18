@@ -29,7 +29,7 @@ conn = pg2.connect(
 with conn.cursor() as curs:
     print(conn)
     print(curs)
-    curs.execute("CREATE TABLE IF NOT EXISTS public.sytesttable (lan1 VARCHAR(20), lan2 VARCHAR(20), lan3 VARCHAR(20), lan4 VARCHAR(20), lan5 VARCHAR(20), inc1 VARCHAR(20), inc2 VARCHAR(20), inc3 VARCHAR(20), inc4 VARCHAR(20), inc5 VARCHAR(20), inc6 VARCHAR(20), inc7 VARCHAR(20), inc8 VARCHAR(20), inc9 VARCHAR(20), inc10 VARCHAR(20), educ1 VARCHAR(20), educ2 VARCHAR(20), educ3 VARCHAR(20), educ4 VARCHAR(20), educ5 VARCHAR(20), home1 VARCHAR(20), state VARCHAR(20), county VARCHAR(20), tract VARCHAR(20));")
+    curs.execute("CREATE TABLE IF NOT EXISTS public.sytesttable (lan_B06007_002E integer, lan_B06007_003E integer, lan_B06007_004E integer, lan_B06007_005E integer, lan_B06007_006E integer, inc_B06010_002E integer, inc_B06010_003E integer, inc_B06010_004E integer, inc_B06010_005E integer, inc_B06010_006E integer, inc_B06010_007E integer, inc_B06010_008E integer, inc_B06010_009E integer, inc_B06010_010E integer, inc_B06010_011E integer, educ_B06009_002E integer, educ_B06009_003E integer, educ_B06009_004E integer, educ_B06009_005E integer, educ_B06009_006E integer, home_B06008_007E integer, state VARCHAR(20), county VARCHAR(20), tract VARCHAR(20));")
     curs.execute("DELETE FROM sytesttable")
     print(curs)
     f = open('data_census_scrape.csv')
