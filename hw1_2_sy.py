@@ -49,10 +49,10 @@ def main():
   with conn.cursor() as curs:
       #print(conn)
       #print(curs)
+      curs.execute("DROP TABLE sy_demography;")
       curs.execute(sql_query)
       #curs.execute("CREATE TABLE IF NOT EXISTS public.sy_demography (lan_B06007_002E integer, lan_B06007_003E integer, lan_B06007_004E integer, lan_B06007_005E integer, lan_B06007_006E integer, inc_B06010_002E integer, inc_B06010_003E integer, inc_B06010_004E integer, inc_B06010_005E integer, inc_B06010_006E integer, inc_B06010_007E integer, inc_B06010_008E integer, inc_B06010_009E integer, inc_B06010_010E integer, inc_B06010_011E integer, educ_B06009_002E integer, educ_B06009_003E integer, educ_B06009_004E integer, educ_B06009_005E integer, educ_B06009_006E integer, home_B06008_007E integer, state VARCHAR(20), county VARCHAR(20), tract VARCHAR(20));")
       #curs.execute("DELETE FROM sy_demography")
-      curs.execute("DROP TABLE sy_demography;")
       #print(curs)
       f = open(csv_filename)
      # curs.copy_from(f, 'sytesttable',columns=('lan1', 'lan2', 'lan3', 'lan4', 'lan5', 'inc1', 'inc2', 'inc3', 'inc4', 'inc5', 'inc6', 'inc7', 'inc8', 'inc9', 'inc10','educ1', 'educ2', 'educ3', 'educ4', 'educ5', 'home1', 'state', 'county', 'tract'), sep=",")
